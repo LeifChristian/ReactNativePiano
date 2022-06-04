@@ -357,10 +357,11 @@ let playThings = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key01.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -394,10 +395,11 @@ let playThings1 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key02.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -431,10 +433,11 @@ let playThings2 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key03.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -468,10 +471,11 @@ let playThings3 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key04.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -504,10 +508,11 @@ let playThings4 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key05.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -540,10 +545,11 @@ let playThings5 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key06.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -576,10 +582,11 @@ let playThings6 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key07.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -612,10 +619,11 @@ let playThings7 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key08.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -648,10 +656,11 @@ let playThings8 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key09.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -684,10 +693,11 @@ let playThings9 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key10.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -720,10 +730,11 @@ let playThings10 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key11.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -756,10 +767,11 @@ let playThings11 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key12.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -792,10 +804,11 @@ let playThings12 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key13.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -828,10 +841,11 @@ let playThings13 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key14.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -864,10 +878,11 @@ let playThings14 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key15.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -900,10 +915,11 @@ let playThings15 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key16.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -936,10 +952,11 @@ let playThings16 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key17.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -972,10 +989,11 @@ let playThings17 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key18.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1008,10 +1026,11 @@ let playThings18 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key19.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1044,10 +1063,11 @@ let playThings19 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key20.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1080,10 +1100,11 @@ let playThings20 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key21.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1116,10 +1137,11 @@ let playThings21 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key22.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1153,10 +1175,11 @@ let playThings22 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key23.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1190,10 +1213,11 @@ let playThings23 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key24.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1227,10 +1251,11 @@ let playThings24 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key25.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1264,10 +1289,11 @@ let playThings25 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key26.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1301,10 +1327,11 @@ let playThings26 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key27.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1338,10 +1365,11 @@ let playThings27 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key28.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1375,10 +1403,11 @@ let playThings28 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key29.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1412,10 +1441,11 @@ let playThings29 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key30.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1448,10 +1478,11 @@ let playThings30 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key31.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1484,10 +1515,11 @@ let playThings31 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key32.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1521,10 +1553,11 @@ let playThings32 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key33.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1558,10 +1591,11 @@ let playThings33 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key34.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1595,10 +1629,11 @@ let playThings34 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key35.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1632,10 +1667,11 @@ let playThings35 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key36.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
@@ -1669,10 +1705,11 @@ let playThings36 = async (key) => {
     // play the file tone.mp3
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
-    let variable = `./audio/${key}.mp3`;
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key37.mp3`));
-     await sound.playAsync();   
+     await sound.playAsync();
+     await sound.unloadAsync();   
 
     // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
