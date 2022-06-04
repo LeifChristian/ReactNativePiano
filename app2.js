@@ -1,14 +1,14 @@
 import React, { Component, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Audio } from 'expo-av';
-import { Button, TouchableOpacity, TouchableHighlight } from 'react-native'
+import { Button, TouchableOpacity } from 'react-native'
 
 // import { WebView } from 'react-native-webview';
 // import { StatusBar } from 'expo-status-bar';
 
 let pitches = [];
 let time = [];
-let click=false;
+let click=false;x
 let toggle=false;
 let recording = false;
 let recordingStartTime
@@ -360,8 +360,7 @@ let playThings = async (key) => {
 
     // let variable = `./audio/${key}.mp3`;
     
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key01.mp3`));
      await sound.playAsync();
    
@@ -398,8 +397,7 @@ let playThings1 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key02.mp3`));
      await sound.playAsync();
 
@@ -436,8 +434,7 @@ let playThings2 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key03.mp3`));
      await sound.playAsync();
 
@@ -474,8 +471,7 @@ let playThings3 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key04.mp3`));
      await sound.playAsync();
 
@@ -511,8 +507,7 @@ let playThings4 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key05.mp3`));
      await sound.playAsync();
 
@@ -548,8 +543,7 @@ let playThings5 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key06.mp3`));
      await sound.playAsync();
 
@@ -585,8 +579,7 @@ let playThings6 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key07.mp3`));
      await sound.playAsync();
 
@@ -622,8 +615,7 @@ let playThings7 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key08.mp3`));
      await sound.playAsync();
 
@@ -659,8 +651,7 @@ let playThings8 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key09.mp3`));
      await sound.playAsync();
 
@@ -696,8 +687,7 @@ let playThings9 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key10.mp3`));
      await sound.playAsync();
 
@@ -733,8 +723,7 @@ let playThings10 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key11.mp3`));
      await sound.playAsync();
 
@@ -770,8 +759,7 @@ let playThings11 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key12.mp3`));
      await sound.playAsync();
 
@@ -807,8 +795,7 @@ let playThings12 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key13.mp3`));
      await sound.playAsync();
 
@@ -844,8 +831,7 @@ let playThings13 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key14.mp3`));
      await sound.playAsync();
 
@@ -881,8 +867,7 @@ let playThings14 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key15.mp3`));
      await sound.playAsync();
 
@@ -918,8 +903,7 @@ let playThings15 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key16.mp3`));
      await sound.playAsync();
 
@@ -955,8 +939,7 @@ let playThings16 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key17.mp3`));
      await sound.playAsync();
 
@@ -993,7 +976,6 @@ let playThings17 = async (key) => {
 
     // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});;
      await sound.loadAsync(require(`./audio/key18.mp3`));
      await sound.playAsync();
 
@@ -1030,8 +1012,7 @@ let playThings18 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key19.mp3`));
      await sound.playAsync();
 
@@ -1067,8 +1048,7 @@ let playThings19 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key20.mp3`));
      await sound.playAsync();
 
@@ -1104,8 +1084,7 @@ let playThings20 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key21.mp3`));
      await sound.playAsync();
 
@@ -1141,8 +1120,7 @@ let playThings21 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key22.mp3`));
      await sound.playAsync();
 
@@ -1179,8 +1157,7 @@ let playThings22 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key23.mp3`));
      await sound.playAsync();
 
@@ -1217,8 +1194,7 @@ let playThings23 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key24.mp3`));
      await sound.playAsync();
 
@@ -1255,8 +1231,7 @@ let playThings24 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key25.mp3`));
      await sound.playAsync();
 
@@ -1293,8 +1268,7 @@ let playThings25 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key26.mp3`));
      await sound.playAsync();
 
@@ -1331,8 +1305,7 @@ let playThings26 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key27.mp3`));
      await sound.playAsync();
 
@@ -1369,8 +1342,7 @@ let playThings27 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key28.mp3`));
      await sound.playAsync();
 
@@ -1407,8 +1379,7 @@ let playThings28 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key29.mp3`));
      await sound.playAsync();
 
@@ -1445,8 +1416,7 @@ let playThings29 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key30.mp3`));
      await sound.playAsync();
 
@@ -1482,8 +1452,7 @@ let playThings30 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key31.mp3`));
      await sound.playAsync();
 
@@ -1519,8 +1488,7 @@ let playThings31 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key32.mp3`));
      await sound.playAsync();
 
@@ -1557,8 +1525,7 @@ let playThings32 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key33.mp3`));
      await sound.playAsync();
 
@@ -1595,8 +1562,7 @@ let playThings33 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key34.mp3`));
      await sound.playAsync();
 
@@ -1633,8 +1599,7 @@ let playThings34 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key35.mp3`));
      await sound.playAsync();
 
@@ -1671,8 +1636,7 @@ let playThings35 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key36.mp3`));
      await sound.playAsync();
 
@@ -1709,8 +1673,7 @@ let playThings36 = async (key) => {
     // SoundPlayer.playSoundFile(`${key}`, 'mp3')
 
     // let variable = `./audio/${key}.mp3`;
-    const sound = new Audio.Sound();
-    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+    const sound = new Audio.Sound()
      await sound.loadAsync(require(`./audio/key37.mp3`));
      await sound.playAsync();
 
@@ -1788,6 +1751,24 @@ recording=false;
   else { alert('nothing to play back'); return;}
   
 
+}
+
+let record = () => {
+
+  // pitchesTime.push({ key: pitches, when: time
+
+  // })
+
+var start = new Date.now();
+
+// for (i = 0; i < 50000; ++i) {
+// // do something
+// }
+
+// var end = new Date.now();
+// var time = end - start;
+time.push(start);
+// alert('Execution time: ' + time);
 }
 
 let startRecording = () => {
