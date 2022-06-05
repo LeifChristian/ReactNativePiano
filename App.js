@@ -25,11 +25,16 @@ const Switchy = () => {
 
   return (
 //     <View>
+<>
 
  <TouchableOpacity onPress={() => {[toggleSwitch(), record()]}} style={[]}>
-   <Text style={isEnabled ? styles.Controls : styles.Redtrols}>{isEnabled ? 'Recording' : "Record"}</Text>
+   <Text style={isEnabled ? styles.Redtrols : styles.Controls}>{isEnabled ? 'Recording' : "Record"}</Text>
    </TouchableOpacity>
 
+<TouchableOpacity onPress={() => {playback2(), (isEnabled ? toggleSwitch() : '')}} style={[]}>
+<Text style={styles.Play}>Play</Text>
+</TouchableOpacity>
+</>
 // {/* 
 //       <Switch
 //         trackColor={{ false: "#767577", true: "#81b0ff" }}
@@ -338,7 +343,7 @@ export default function App() {
       </View>
       <View style = {styles.container1}>
           {/* <Button style = {styles.fuckbutton} title = 'Record' onPress={() => {record()}}></Button> */}
-          <Switchy/><Play/><Clear/>
+          <Switchy/><Clear/>
           {/* <Button title = "Play" onPress={() => {playback2()}}>RealTime</Button>
           <Button title = "Clear" onPress={() => {clearit()}}>Clear</Button> */}
           {/*  with touchableOpacity: --> <Record/><Play/><Clear/> */}
@@ -369,7 +374,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 7,
     flexDirection: 'row',
-    backgroundColor: 'grey',
+    backgroundColor: 'rgb(50, 144, 144)',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: '-4%'
@@ -379,7 +384,7 @@ const styles = StyleSheet.create({
 
     // display: 'flex',
     flexDirection: 'row',
-    backgroundColor: 'grey',
+    backgroundColor: 'rgb(50, 144, 144)',
     alignItems: 'center',
     justifyContent: 'center',
 
@@ -393,10 +398,10 @@ C: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 E: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 F: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 
-Controls: {backgroundColor: 'blue', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Controls: {backgroundColor: 'rgb(54, 118, 228)', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
 Redtrols: {backgroundColor: 'red', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
-Play: {backgroundColor: 'aquamarine', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
-Clear: {backgroundColor: 'pink', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28}
+Play: {backgroundColor: 'rgb(42, 210, 42)', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Clear: {backgroundColor: 'lightgrey', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28}
 
 
 });
