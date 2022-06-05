@@ -27,7 +27,7 @@ const Switchy = () => {
 //     <View>
 
  <TouchableOpacity onPress={() => {[toggleSwitch(), record()]}} style={[]}>
-   <Text style={isEnabled ? styles.Controls : styles.Redtrols}>{isEnabled ? 'Record' : "Recording"}</Text>
+   <Text style={isEnabled ? styles.Controls : styles.Redtrols}>{isEnabled ? 'Recording' : "Record"}</Text>
    </TouchableOpacity>
 
 // {/* 
