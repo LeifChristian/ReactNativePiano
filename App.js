@@ -2,6 +2,9 @@ import React, { Component, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Audio } from 'expo-av';
 import { Button, TouchableOpacity, TouchableHighlight } from 'react-native'
+// import Switchy from './switch'
+
+
 
 // import { WebView } from 'react-native-webview';
 // import { StatusBar } from 'expo-status-bar';
@@ -14,6 +17,33 @@ let recording = false;
 let recordingStartTime
 let pitchesTime = [];
 let playingBack = false;
+let titleButton = "Record";
+
+const Switchy = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
+
+  return (
+//     <View>
+
+ <TouchableOpacity onPress={() => {[toggleSwitch(), record()]}} style={[]}>
+   <Text style={isEnabled ? styles.Controls : styles.Redtrols}>{isEnabled ? 'Record' : "Recording"}</Text>
+   </TouchableOpacity>
+
+// {/* 
+//       <Switch
+//         trackColor={{ false: "#767577", true: "#81b0ff" }}
+//         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+//         ios_backgroundColor="#3e3e3e"
+//         onValueChange={toggleSwitch}
+//         value={isEnabled}
+//       /> */}
+
+//       <Button title = {isEnabled.toString()} onPress = {toggleSwitch} style = {styles.beet}></Button>
+
+//     </View>
+  );
+}
 
 const C = ({ onPress, title }) => (
   <TouchableOpacity onPress={() => {playThings('1')}} style={[styles.appButtonContainer, styles.natural]}>
@@ -233,22 +263,24 @@ const C3 = ({ onPress, title }) => (
   </TouchableOpacity>
 );
 const Record = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playback2()}} style={[]}>
+  
+  <TouchableOpacity onPress={() => {record()}} style={[]}>
     <Text style={styles.Controls}>Record</Text>
   </TouchableOpacity>
 );
 const Play = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playback()}} style={[]}>
-    <Text style={styles.Controls}>Play</Text>
+  <TouchableOpacity onPress={() => {playback2()}} style={[]}>
+    <Text style={styles.Play}>Play</Text>
   </TouchableOpacity>
 );
 const Clear = ({ onPress, title }) => (
   <TouchableOpacity onPress={() => {clearit()}} style={[]}>
-    <Text style={styles.Controls}>Clear</Text>
+    <Text style={styles.Clear}>Clear</Text>
   </TouchableOpacity>
 );
 
 export default function App() {
+
   return (
     <>
       <View style={styles.container}>
@@ -286,14 +318,29 @@ export default function App() {
         <G2/>
         <Gsharp2/>
         <A2/>
+
+        {/* <View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+  <A2/>
+  
+</View>
+
+
+<View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+  <Asharp2/>
+ 
+</View>
+ */}
         <Asharp2/>
         <B2/>
         <C3/>
       </View>
       <View style = {styles.container1}>
-          <Button title = "Record" id = 'record' onPress={() => {playback()}}></Button>
-          <Button title = "Play" id="playback" onPress={() => {playback2()}}>RealTime</Button>
-          <Button title = "Clear" onPress={() => {clearit()}}>Clear</Button>
+          {/* <Button style = {styles.fuckbutton} title = 'Record' onPress={() => {record()}}></Button> */}
+          <Switchy/><Play/><Clear/>
+          {/* <Button title = "Play" onPress={() => {playback2()}}>RealTime</Button>
+          <Button title = "Clear" onPress={() => {clearit()}}>Clear</Button> */}
           {/*  with touchableOpacity: --> <Record/><Play/><Clear/> */}
       </View>
     </>
@@ -346,7 +393,10 @@ C: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 E: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 F: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 
-Controls: {backgroundColor: 'blue', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28}
+Controls: {backgroundColor: 'blue', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Redtrols: {backgroundColor: 'red', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Play: {backgroundColor: 'aquamarine', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Clear: {backgroundColor: 'pink', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28}
 
 
 });
@@ -1744,7 +1794,7 @@ console.log(time, 'no time')
 // document.getElementById('clearedit').innerHTML = "cleared"
 }
 
-let playback =  () => {
+let record =  () => {
   toggle = !toggle;
   click = true;
 
