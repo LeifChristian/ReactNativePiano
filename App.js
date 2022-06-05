@@ -51,7 +51,7 @@ const Switchy = () => {
 }
 
 const C = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings('1')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings0('1')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
@@ -63,207 +63,207 @@ const Csharp = ({ onPress, title }) => (
 );
 
 const D = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings2('2')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings2('3')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Dsharp = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings3('3')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings3('4')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const E = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings4('4')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings4('5')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const F = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings5('5')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings5('6')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Fsharp = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings6('6')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings6('7')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const G = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings7('7')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings7('8')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 const Gsharp = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings8('8')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings8('9')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 const A = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings9('9')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings9('10')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Asharp = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings10('10')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings10('11')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const B = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings11('11')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings11('12')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const C1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings12('12')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings12('13')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Csharp1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings13('13')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings13('14')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const D1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings14('14')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings14('15')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Dsharp1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings15('15')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings15('16')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const E1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings16('16')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings16('17')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const F1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings17('17')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings17('18')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Fsharp1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings18('18')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings18('19')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const G1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings19('19')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings19('20')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Gsharp1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings20('20')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings20('21')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const A1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings21('21')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings21('22')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Asharp1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings22('22')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings22('23')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const B1 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings23('23')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings23('24')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const C2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings24('24')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings24('25')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Csharp2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings25('25')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings25('26')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const D2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings26('26')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings26('27')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Dsharp2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings27('27')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings27('28')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const E2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings28('28')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings28('29')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const F2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings29('29')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings29('30')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Fsharp2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings30('30')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings30('31')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const G2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings31('31')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings31('32')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Gsharp2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings32('32')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings32('33')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const A2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings33('33')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings33('34')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const Asharp2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings34('34')}} style={[styles.appButtonContainer, styles.sharp]}>
+  <TouchableOpacity onPress={() => {playThings34('35')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 const B2 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings35('35')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings35('36')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 const C3 = ({ onPress, title }) => (
-  <TouchableOpacity onPress={() => {playThings36('36')}} style={[styles.appButtonContainer, styles.natural]}>
+  <TouchableOpacity onPress={() => {playThings36('37')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
@@ -406,7 +406,7 @@ Clear: {backgroundColor: 'lightgrey', padding: 3, borderRadius: 6, marginLeft: "
 
 });
 
-let playThings = async (key) => {
+let playThings0 = async (key) => {
 
   // recording=true;
 
@@ -1794,6 +1794,45 @@ let playThings36 = async (key) => {
     }
 }
 
+let playThings37 = async (key) => {
+
+  // recording=true;
+
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
+    const sound = new Audio.Sound();
+    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+     await sound.loadAsync(require(`./audio/key38.mp3`));
+     await sound.playAsync();
+
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
+    try {
+      // audio.play()
+    
+      if(!playingBack){
+        recording = true;
+        
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
+        }
+       
+      if(recording && click){
+       
+        pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
+        console.log(pitchesTime)
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
+      }
+   
+    } catch (err) {
+      console.log('Failed to play...' + err);
+    }
+}
+
+
 let clearit = () => { pitches = []; time = []; pitchesTime = []; playingBack = false; console.log(pitches, "no pitches");
 console.log(time, 'no time')
 // document.getElementById('clearedit').innerHTML = "cleared"
@@ -1832,7 +1871,7 @@ recording=false;
 
       // let name = `playThings${pitch.pitch}`
 
-      let ca=`playThings${pitch.pitch}()`
+      let ca=`playThings${pitch.pitch-1}()`
   
        setTimeout(function () {eval(ca)}, (pitch.timing ))
 
