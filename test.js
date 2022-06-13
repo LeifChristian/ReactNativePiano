@@ -1,13 +1,15 @@
 import React, { Component, useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Audio } from 'expo-av';
-import { Button, TouchableOpacity, TouchableHighlight, Pressable } from 'react-native';
-
-// import {} from 'react-native-gesture-handler'
+import { Button, TouchableOpacity, TouchableHighlight, Pressable } from 'react-native'
+// import Switchy from './switch'
+// import { WebView } from 'react-native-webview';
+// import { StatusBar } from 'expo-status-bar';
 
 let pitches = [];
 let time = [];
 let click=false;
+let ass = false;
 let toggle=false;
 let recording = false;
 let recordingStartTime
@@ -19,7 +21,9 @@ const Switchy = () => {
   const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
 
   return (
+//     <View>
 <>
+
  <TouchableOpacity onPressIn={() => {[toggleSwitch(), record()]}} style={[]}>
    <Text style={isEnabled ? styles.Redtrols : styles.Controls}>{isEnabled ? 'Recording' : "Record"}</Text>
    </TouchableOpacity>
@@ -28,70 +32,50 @@ const Switchy = () => {
 <Text style={styles.Play}>Play</Text>
 </TouchableOpacity>
 </>
+// {/* 
+//       <Switch
+//         trackColor={{ false: "#767577", true: "#81b0ff" }}
+//         thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+//         ios_backgroundColor="#3e3e3e"
+//         onValueChange={toggleSwitch}
+//         value={isEnabled}
+//       /> */}
+
+//       <Button title = {isEnabled.toString()} onPress = {toggleSwitch} style = {styles.beet}></Button>
+
+//     </View>
   );
 }
-const C = ({ onPress, title }) => { 
-  
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
 
-  return ( 
-
-  <View  style={!isEnabled ? [styles.appButtonContainer, styles.natural] : [styles.transparent, styles.appButtonContainer, styles.natural]} onTouchStart={() => {toggleSwitch(); playThings0('1')}} onTouchEnd={()=>{toggleSwitch(); console.log('released')}}>
-  <TouchableOpacity>
+const C = ({ onPress, title }) => ( 
+  <TouchableOpacity onPressIn={() => {playThings0('1')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
-  </TouchableOpacity></View>
-);}
+  </TouchableOpacity>
+);
 
-const Csharp = ({ onPress, title }) => { 
-  
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
-
-  return ( 
-
-  <View  style={!isEnabled ? [styles.appButtonContainer, styles.sharp] : [styles.transparent, styles.appButtonContainer, styles.sharp]} onTouchStart={() => {toggleSwitch(); playThings1('2')}} onTouchEnd={()=>{toggleSwitch(); console.log('released')}}>
-  <TouchableOpacity>
+const Csharp = ({ onPress, title }) => (
+  <TouchableOpacity onPressIn={() => {playThings1('2')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
-  </TouchableOpacity></View>
-);}
+  </TouchableOpacity>
+);
 
-const D = ({ onPress, title }) => { 
-  
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
-
-  return ( 
-
-  <View  style={!isEnabled ? [styles.appButtonContainer, styles.natural] : [styles.transparent, styles.appButtonContainer, styles.natural]} onTouchStart={() => {toggleSwitch(); playThings2('3')}} onTouchEnd={()=>{toggleSwitch(); console.log('released')}}>
-  <TouchableOpacity>
+const D = ({ onPress, title }) => (
+  <TouchableOpacity onPressIn={() => {playThings2('3')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
-  </TouchableOpacity></View>
-);}
+  </TouchableOpacity>
+);
 
-const Dsharp = ({ onPress, title }) => { 
-  
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
-
-  return ( 
-
-  <View  style={!isEnabled ? [styles.appButtonContainer, styles.sharp] : [styles.transparent, styles.appButtonContainer, styles.sharp]} onTouchStart={() => {toggleSwitch(); playThings3('4')}} onTouchEnd={()=>{toggleSwitch(); console.log('released')}}>
-  </View>
-);}
-
-const E = ({ onPress, title }) => { 
-  
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
-
-  return ( 
-
-  <View  style={!isEnabled ? [styles.appButtonContainer, styles.EB] : [styles.transparent, styles.appButtonContainer, styles.EB]} onTouchStart={() => {toggleSwitch(); playThings4('5')}} onTouchEnd={()=>{toggleSwitch(); console.log('released')}}>
-  <TouchableOpacity>
+const Dsharp = ({ onPress, title }) => (
+  <TouchableOpacity onPressIn={() => {playThings3('4')}} style={[styles.appButtonContainer, styles.sharp]}>
     <Text style={styles.appButtonText}>{title}</Text>
-  </TouchableOpacity></View>
-);}
+  </TouchableOpacity>
+);
+
+const E = ({ onPress, title }) => (
+  <TouchableOpacity onPressIn={() => {playThings4('5')}} style={[styles.appButtonContainer, styles.EB]}>
+    <Text style={null}>{title}</Text>
+  </TouchableOpacity>
+);
 
 const F = ({ onPress, title }) => (
   <TouchableOpacity onPressIn={() => {playThings5('6')}} style={[styles.appButtonContainer, styles.natural]}>
@@ -230,7 +214,7 @@ const Dsharp2 = ({ onPress, title }) => (
 );
 
 const E2 = ({ onPress, title }) => (
-  <TouchableOpacity onPressIn={() => {playThings28('29')}} style={[styles.appButtonContainer, styles.EB]}>
+  <TouchableOpacity onPressIn={() => {playThings28('29')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
@@ -271,7 +255,7 @@ const Asharp2 = ({ onPress, title }) => (
   </TouchableOpacity>
 );
 const B2 = ({ onPress, title }) => (
-  <TouchableOpacity onPressIn={() => {playThings35('36')}} style={[styles.appButtonContainer, styles.EB]}>
+  <TouchableOpacity onPressIn={() => {playThings35('36')}} style={[styles.appButtonContainer, styles.natural]}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
@@ -301,8 +285,8 @@ const Clear = ({ onPress, title }) => (
 export default function App() {
 
     const [isEnabled, setIsEnabled] = useState(false);
-    const toggleUp = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
-    const toggleDown = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
+    const toggleSwitch = () => {setIsEnabled(previousState => !previousState); console.log(isEnabled)};
+
 
   if(isEnabled) {  return (
     <>
@@ -319,6 +303,7 @@ export default function App() {
         <A/>
         <Asharp/>
         <B/>
+      
         <C1/>
         <Csharp1/>
         <D1/>
@@ -332,14 +317,39 @@ export default function App() {
         <Asharp1/>
         <B1/>
         <C2/>
+
+        {/* <View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+  <A2/>
+  
+  
+</View>
+
+
+<View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+  <Asharp2/>
+ 
+</View>
+ */}
         
       </View>
       <View style = {styles.container1}>
-          <View style={styles.container1}>
-          </View>
-          <Switchy/><Clear/>
-          <TouchableOpacity onPress={() => [toggleDown()]}><Text style = {isEnabled ? styles.show : styles.hide} >{isEnabled? ">": "<"}</Text></TouchableOpacity>
+          {/* <Button style = {styles.fuckbutton} title = 'Record' onPressIn={() => {record()}}></Button> */}
 
+          <View>
+        <TouchableOpacity onPress={() => [toggleSwitch()]}><Text style = {isEnabled ? styles.LoHi : styles.HiLo} >{isEnabled? ">": "<"}</Text></TouchableOpacity>
+        </View>
+          <Switchy/><Clear/>
+
+          {/* <Button  title={isEnabled? "LOW" : "HIGH"} onPress={() => {toggleSwitch()}}></Button> */}
+
+
+          <TouchableOpacity onPress={() => [toggleSwitch()]}><Text style = {styles.LoHi} >{isEnabled? "<": ">"}</Text></TouchableOpacity>
+
+          {/* <Button title = "Play" onPressIn={() => {playback2()}}>RealTime</Button>
+          <Button title = "Clear" onPressIn={() => {clearit()}}>Clear</Button> */}
+          {/*  with touchableOpacity: --> <Record/><Play/><Clear/> */}
       </View>
     </>
   );}  
@@ -371,25 +381,52 @@ export default function App() {
       <Asharp2/>
       <B2/>
       <C3/>
+
+
+
+      {/* <View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+<A2/>
+
+
+</View>
+
+
+<View onTouchStart={onUpIn} onTouchEnd={onUpOut}>
+
+<Asharp2/>
+
+</View>
+*/}
       
     </View>
     <View style = {styles.container1}>
+        {/* <Button style = {styles.fuckbutton} title = 'Record' onPressIn={() => {record()}}></Button> */}
+
         <View>
-        <TouchableOpacity onPress={() => [toggleUp()]}><Text style = {isEnabled ? styles.hide : styles.show} >{isEnabled? ">": "<"}</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => [toggleSwitch()]}><Text style = {isEnabled ? styles.LoHi : styles.HiLo} >{isEnabled? ">": "<"}</Text></TouchableOpacity>
         </View>
         <Switchy/><Clear/>
+
+        {/* <Button title={isEnabled ? "LOW" : 'HIGH'} onPress={() => {toggleSwitch()}}></Button> */}
+
+        {/* <Button title = "Play" onPressIn={() => {playback2()}}>RealTime</Button>
+        <Button title = "Clear" onPressIn={() => {clearit()}}>Clear</Button> */}
+        {/*  with touchableOpacity: --> <Record/><Play/><Clear/> */}
+
 <View>
-       
+        <TouchableOpacity onPress={() => [toggleSwitch()]}><Text style = {isEnabled ? styles.LoHi : styles.HiLo} >{isEnabled? "<": ">"}</Text></TouchableOpacity>
         </View>
 
     </View>
   </>)}
 
 }
+
 const styles = StyleSheet.create({
 
   appButtonContainer: {
-    elevation: 4,
+    elevation: 8,
     width: "2%",
     marginLeft: '1  %',
     backgroundColor: "black",
@@ -415,74 +452,66 @@ const styles = StyleSheet.create({
   },
 
  container1: {
+    // display: 'flex',
     flexDirection: 'row',
     backgroundColor: 'rgb(50, 144, 144)',
+    alignItems: 'center',
     justifyContent: 'center',
-    position: "relative"
   },
 
-sharp : { 
-          color: 'black', 
-          backgroundColor: 'black', 
-          height: '29.9%', 
-          marginTop: "-18.4%", 
-          width: '5.8%', 
-          marginLeft: "-2.1%", 
-          marginRight: '-2.%', 
-          zIndex: 2 
-        },
-natural: { 
-          padding: "1%",color: 'white', backgroundColor: 'white',
-          height: '58%', width: '6.8%', marginLeft: '-.1%', marginRight: '.5%' 
-        },
+sharp : { color: 'black', backgroundColor: 'black', height: '29.9%', marginTop: "-18.4%", width: '5.8%', marginLeft: "-2.1%", marginRight: '-2.%', zIndex: 2 },
+natural: { padding: "1%",color: 'white', backgroundColor: 'white', height: '58%', width: '6.8%', marginLeft: '-.1%', marginRight: '.5%' },
 
-EB: {color: 'white', backgroundColor: 'white', height: '58%', width: '7%', marginLeft: '-.2%', marginRight: '1.2%' },
+EB: {color: 'white', backgroundColor: 'white', height: '58%', width: '6.8%', marginLeft: '-.1%', marginRight: '1%' },
 
-Controls: {position: 'relative', backgroundColor: 'rgb(54, 118, 228)', 
-            padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
 
-Redtrols: {backgroundColor: 'red', padding: 3, borderRadius: 6, marginLeft: "2%", 
-            marginRight: "2%", textAlign: 'center', fontSize: 28},
+// B: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%',},
+// C: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%',},
+// E: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
+// F: {  color: 'white', backgroundColor: 'white', height: '37%', width: '3.4%', },
 
-Play: {backgroundColor: 'rgb(42, 210, 42)', padding: 3, borderRadius: 6, marginLeft: "2%", 
 
-            marginRight: "2%", textAlign: 'center', fontSize: 28},
+Controls: {backgroundColor: 'rgb(54, 118, 228)', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Redtrols: {backgroundColor: 'red', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Play: {backgroundColor: 'rgb(42, 210, 42)', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+Clear: {backgroundColor: 'lightgrey', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
 
-Clear: {backgroundColor: 'lightgrey', padding: 3, borderRadius: 6, 
-            marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
-
-show: {backgroundColor: 'black', color: 'white', fontWeight: '700', padding: 3, borderRadius: 6, 
-            marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
-
-hide: {display: 'none'},
-
-transparent: {opacity: 0}
-
+LoHi: {backgroundColor: 'rgb(42, 210, 177)', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
+HiLo: {backgroundColor: 'red', padding: 3, borderRadius: 6, marginLeft: "2%", marginRight: "2%", textAlign: 'center', fontSize: 28},
 });
 
 let playThings0 = async (key) => {
 
+  // recording=true;
+
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
+    
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key01.mp3`));
      await sound.playAsync();
    
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -492,28 +521,35 @@ let playThings0 = async (key) => {
 
 let playThings1 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key02.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -523,28 +559,35 @@ let playThings1 = async (key) => {
 
 let playThings2 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key03.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -554,28 +597,35 @@ let playThings2 = async (key) => {
 
 let playThings3 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key04.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -584,28 +634,35 @@ let playThings3 = async (key) => {
 }
 let playThings4 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key05.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -614,28 +671,35 @@ let playThings4 = async (key) => {
 }
 let playThings5 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key06.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -644,28 +708,35 @@ let playThings5 = async (key) => {
 }
 let playThings6 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key07.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -674,28 +745,35 @@ let playThings6 = async (key) => {
 }
 let playThings7 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key08.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -704,28 +782,35 @@ let playThings7 = async (key) => {
 }
 let playThings8 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key09.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -734,28 +819,35 @@ let playThings8 = async (key) => {
 }
 let playThings9 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key10.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -764,28 +856,35 @@ let playThings9 = async (key) => {
 }
 let playThings10 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key11.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -794,28 +893,35 @@ let playThings10 = async (key) => {
 }
 let playThings11 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key12.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -824,28 +930,35 @@ let playThings11 = async (key) => {
 }
 let playThings12 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key13.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -854,28 +967,35 @@ let playThings12 = async (key) => {
 }
 let playThings13 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key14.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -884,28 +1004,35 @@ let playThings13 = async (key) => {
 }
 let playThings14 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key15.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -914,28 +1041,35 @@ let playThings14 = async (key) => {
 }
 let playThings15 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key16.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -944,28 +1078,35 @@ let playThings15 = async (key) => {
 }
 let playThings16 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key17.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -974,29 +1115,36 @@ let playThings16 = async (key) => {
 }
 let playThings17 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});;
      await sound.loadAsync(require(`./audio/key18.mp3`));
      await sound.playAsync();
 
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1005,28 +1153,35 @@ let playThings17 = async (key) => {
 }
 let playThings18 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key19.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1035,28 +1190,35 @@ let playThings18 = async (key) => {
 }
 let playThings19 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key20.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1065,28 +1227,35 @@ let playThings19 = async (key) => {
 }
 let playThings20 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key21.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1095,28 +1264,35 @@ let playThings20 = async (key) => {
 }
 let playThings21 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key22.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1126,28 +1302,35 @@ let playThings21 = async (key) => {
 
 let playThings22 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key23.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1157,28 +1340,35 @@ let playThings22 = async (key) => {
 
 let playThings23 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key24.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1188,28 +1378,35 @@ let playThings23 = async (key) => {
 
 let playThings24 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key25.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1219,28 +1416,35 @@ let playThings24 = async (key) => {
 
 let playThings25 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key26.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1250,28 +1454,35 @@ let playThings25 = async (key) => {
 
 let playThings26 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key27.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1281,28 +1492,35 @@ let playThings26 = async (key) => {
 
 let playThings27 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key28.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1312,28 +1530,35 @@ let playThings27 = async (key) => {
 
 let playThings28 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key29.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1343,28 +1568,35 @@ let playThings28 = async (key) => {
 
 let playThings29 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key30.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1373,28 +1605,35 @@ let playThings29 = async (key) => {
 }
 let playThings30 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key31.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1403,28 +1642,35 @@ let playThings30 = async (key) => {
 }
 let playThings31 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key32.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1434,28 +1680,35 @@ let playThings31 = async (key) => {
 
 let playThings32 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key33.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1465,28 +1718,35 @@ let playThings32 = async (key) => {
 
 let playThings33 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key34.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1496,28 +1756,35 @@ let playThings33 = async (key) => {
 
 let playThings34 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key35.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1527,28 +1794,35 @@ let playThings34 = async (key) => {
 
 let playThings35 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key36.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
-        
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1558,28 +1832,73 @@ let playThings35 = async (key) => {
 
 let playThings36 = async (key) => {
 
+  // recording=true;
 
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
     const sound = new Audio.Sound();
     sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
      await sound.loadAsync(require(`./audio/key37.mp3`));
      await sound.playAsync();
 
-    
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
     try {
-      
+      // audio.play()
     
       if(!playingBack){
         recording = true;
         
-        
-        console.log(pitchesTime, 'pitchesTime')
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
         }
        
       if(recording && click){
        
         pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
         console.log(pitchesTime)
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
+      }
+   
+    } catch (err) {
+      console.log('Failed to play...' + err);
+    }
+}
+
+let playThings37 = async (key) => {
+
+  // recording=true;
+
+    // play the file tone.mp3
+    // SoundPlayer.playSoundFile(`${key}`, 'mp3')
+
+    // let variable = `./audio/${key}.mp3`;
+    const sound = new Audio.Sound();
+    sound.setOnPlaybackStatusUpdate((status) => {if (!status.didJustFinish) return;sound.unloadAsync();});
+     await sound.loadAsync(require(`./audio/key38.mp3`));
+     await sound.playAsync();
+
+    // document.getElementById('clearedit').innerHTML = ""  *** put this back!!!!
+    try {
+      // audio.play()
+    
+      if(!playingBack){
+        recording = true;
         
+        // pitchesTime.push({pitch: key, timing: Date.now() })
+        console.log(pitchesTime, 'adddss')
+        }
+       
+      if(recording && click){
+       
+        pitchesTime.push({pitch: key, timing: Date.now() - recordingStartTime})
+        console.log(pitchesTime)
+        // var start = new Date().getTime();
+
+        // time.push(start); console.log(time)
       }
    
     } catch (err) {
@@ -1588,16 +1907,20 @@ let playThings36 = async (key) => {
 }
 
 
-
-
 let clearit = () => { pitches = []; time = []; pitchesTime = []; playingBack = false; console.log(pitches, "no pitches");
 console.log(time, 'no time')
-
+// document.getElementById('clearedit').innerHTML = "cleared"
 }
 
 let record =  () => {
   toggle = !toggle;
   click = true;
+
+// if(toggle){document.getElementById('record').style.backgroundColor='red';
+// document.getElementById('record').innerHTML = "busy"
+// }
+
+// if(!toggle){document.getElementById('record').style.backgroundColor=''; document.getElementById('record').innerHTML = 'Record'}
 
   startRecording();
   
@@ -1606,6 +1929,9 @@ let record =  () => {
 let playback2 = async () => {
 
   if(!click){alert('no'); return}
+
+  // document.getElementById('clearedit').innerHTML = ""
+  // document.getElementById('record').style.backgroundColor=''; document.getElementById('record').innerHTML = 'Record'
 
 playingBack=true;
 recording=false;
@@ -1617,13 +1943,19 @@ recording=false;
       console.log(pitch.timing)
       console.log(pitch.pitch);
 
+      // let name = `playThings${pitch.pitch}`
+
       let ca=`playThings${pitch.pitch-1}()`
+  
        setTimeout(function () {eval(ca)}, (pitch.timing ))
+
       })
+  
   }
 
   else { alert('nothing to play back'); return;}
   
+
 }
 
 let startRecording = () => {
